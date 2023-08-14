@@ -81,6 +81,9 @@
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Telefono</th>
+                                <th scope="col">Edad</th>
+                                <th scope="col">Direccion</th>
+                                <th scope="col">Factorrh</th>    
                                 <th scope="col">Herramientas</th>
                                 </tr>
                             </thead>
@@ -94,6 +97,9 @@
                                                 <td>".$row['nombres']." ".$row['apellidos']."</td>
                                                 <td>".$row['email']."</td>
                                                 <td>".$row['telefono']."</td>
+                                                td>".$row['edad']."</td>
+                                                td>".$row['direccion']."</td>
+                                                td>".$row['factorrh']."</td>
                                                 <td>
                                                     <a href='".ROOT."/modulos/notas/notas.php?id=".$row['id']."' class='btn btn-success'>Notas</a>
                                                     <a href='editEstudiante.php?id=".$row['id']."' class='btn btn-primary'>Modificar</a>
