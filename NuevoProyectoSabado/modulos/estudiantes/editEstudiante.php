@@ -19,7 +19,7 @@
         $estud_email  = $r->email;
         $estud_telefono = $r->telefono;
         $estud_edad = $r->edad;
-        estud_direccion = $->direccion;
+        estud_direccion = $r->direccion;
         estud_factorrh = $r->factorrh;
     }
     
