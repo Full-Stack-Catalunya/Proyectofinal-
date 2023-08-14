@@ -76,6 +76,9 @@
                                 <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Nombre</th>
+                                <th scope="col">Jornada</th>
+                                <th scope="col">Docente</th>
+                                <th scope="col">Area</th>
                                 <th scope="col">Herramientas</th>
                                 </tr>
                             </thead>
@@ -86,6 +89,9 @@
                                         echo "<tr>
                                                 <td>".$row['id']."</td>
                                                 <td>".$row['nombre']."</td>
+                                                <td>".$row['jornada']."</td>
+                                                <td>".$row['docente']."</td>
+                                                <td>".$row['area']."</td>
                                                 <td>
                                                     <a href='editMateria.php?id=".$row['id']."' class='btn btn-primary'>Modificar</a>
                                                     <a href='delete.php?id=".$row['id']."' class='btn btn-danger'>Eliminar</a>

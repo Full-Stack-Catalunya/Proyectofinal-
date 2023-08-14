@@ -7,10 +7,13 @@
     $conexion = new Database;  
     $result = $conexion->editMateria($id);
 
-    $mat_id = $mat_nombre = "";
+    $mat_id = $mat_nombre = mat_jornada = mat_docente = mat_area ="";
     foreach($result->fetchAll(PDO::FETCH_OBJ) as $r){
         $mat_id = $r->id;
         $mat_nombre = $r->nombre;
+        $mat_jornada = $r->jornada;
+        $mat_docente = $r->docente;
+        $mat_area = $r->area;
     }
     
 ?>
@@ -39,7 +42,22 @@
                             <div class="form-group">
                                 <label for="nombre">Nombre</label>
                                 <input type="text" class="form-control" id="nombre" name="nombre" value="<?= $mat_nombre ?>" required>
-                                <input type="hidden" class="form-control" id="id" name="id" value="<?= $mat_id ?>">
+                                <input type="hidden" class="form-control" id="nombre" name="nombre" value="<?= $mat_nombre ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="jornada">Jornada</label>
+                                <input type="text" class="form-control" id="jornada" name="jornada" value="<?= $mat_jornada ?>" required>
+                                <input type="hidden" class="form-control" id="jornada" name="jornada" value="<?= $mat_jornada ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="docente">Docente</label>
+                                <input type="text" class="form-control" id="docente" name="docente" value="<?= $mat_docente ?>" required>
+                                <input type="hidden" class="form-control" id="docente" name="docente" value="<?= $mat_docente ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="area">Area</label>
+                                <input type="text" class="form-control" id="area" name="area" value="<?= $mat_area ?>" required>
+                                <input type="hidden" class="form-control" id="area" name="area" value="<?= $mat_area ?>">
                             </div>
                             
                             <button type="submit" class="btn btn-primary">Actualizar</button>

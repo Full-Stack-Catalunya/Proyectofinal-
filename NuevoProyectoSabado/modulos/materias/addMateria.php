@@ -32,6 +32,18 @@
                                 <label for="nombre">Nombre</label>
                                 <input type="text" class="form-control" id="nombre" name="nombre" required>
                             </div>
+                            <div class="form-group">
+                                <label for="jornada">Jornada</label>
+                                <input type="text" class="form-control" id="jornada" name="jornada" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="docente">Docente</label>
+                                <input type="text" class="form-control" id="docente" name="docente" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="area">Area</label>
+                                <input type="text" class="form-control" id="area" name="area" required>
+                            </div>
                             
                             <input type="button" class="btn btn-primary" onclick="ValidarMaterias()" value='Crear'>
                         </form>     
