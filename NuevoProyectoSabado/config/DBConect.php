@@ -103,7 +103,7 @@
 
         public function DatosMaterias() { 
             $conexion = Database::getInstance(); 
-            $sql="SELECT id,nombre from materias"; 
+            $sql="SELECT id,nombre,jornada,docente,area from materias"; 
             $result = $conexion->db->prepare($sql);    
             $result->execute(); 
             return $result; 
@@ -121,14 +121,17 @@
             }
         }
 
-        public function CrearMateria($nombre) { 
+        public function CrearMateria($nombre,$jornada,$docente,$area) { 
 
             try {
                 $conexion = Database::getInstance(); 
-                $result = $conexion->db->prepare("INSERT INTO materias (nombre) VALUES (:nombre)");
+                $result = $conexion->db->prepare("INSERT INTO materias (nombre,jornada,docente,area) VALUES (:nombre,jornada,docente,area)");
                 $result->execute(
                                     array(
                                         ':nombre'=>$nombre
+                                        ':jornada'=>$jornada
+                                        ':docente'=>$docente
+                                        ':area'=>$area
                                     )
                                 );
                 return "2";
@@ -139,21 +142,24 @@
 
         public function editMateria($id) { 
             $conexion = Database::getInstance(); 
-            $sql="SELECT id,nombre from materias where id=:id"; 
+            $sql="SELECT id,nombre,jornada,docente,area from materias where id=:id"; 
             $result = $conexion->db->prepare($sql);     
             $params = array("id" => $id); 
             $result->execute($params);
             return $result; 
         } 
 
-        public function updateMateria($nombre,$id) { 
+        public function updateMateria($nombre,$jornada,$docente,$area,$id) { 
 
             try {
                 $conexion = Database::getInstance(); 
-                $result = $conexion->db->prepare("UPDATE materias set nombre=:nombre where id=:id ");
+                $result = $conexion->db->prepare("UPDATE materias set nombre=:nombre jornada=:jornada docente=:docente area=:area where id=:id ");
                 $result->execute(
                                     array(
                                         ':nombre'=>$nombre,
+                                        ':jornada'=>$jornada,
+                                        ':docente'=>$docente,
+                                        ':area'=>$area,
                                         ':id'=>$id
                                     )
                                 );
