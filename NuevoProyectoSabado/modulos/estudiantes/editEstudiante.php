@@ -10,7 +10,7 @@
     $conexion = new Database;  
     $result = $conexion->editEstudiante($id);
 
-    $estud_id = $estud_identificacion = $estud_nombres = $estud_apellidos = $estud_email = $estud_telefono = "";
+    $estud_id = $estud_identificacion = $estud_nombres = $estud_apellidos = $estud_email = $estud_telefono = $estud_edad = $estud_direccion = $estud_factorrh = "";
     foreach($result->fetchAll(PDO::FETCH_OBJ) as $r){
         $estud_id = $r->id;
         $estud_identificacion = $r->identificacion;
@@ -18,6 +18,9 @@
         $estud_apellidos = $r->apellidos;
         $estud_email  = $r->email;
         $estud_telefono = $r->telefono;
+        $estud_edad = $r->edad;
+        estud_direccion = $->direccion;
+        estud_factorrh = $r->factorrh;
     }
     
 ?>
@@ -68,6 +71,21 @@
                             <div class="form-group">
                                 <label for="telefono">Telefono</label>
                                 <input type="text" class="form-control" id="telefono" name="telefono" value="<?= $estud_telefono ?>" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="edad">edad</label>
+                                <input type="text" class="form-control" id="edad" name="edad" value="<?= $estud_edad ?>" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="direccion">direccion</label>
+                                <input type="text" class="form-control" id="direccion" name="direccion" value="<?= $estud_direccion ?>" required>
+                            </div>
+                            
+                             <div class="form-group">
+                                <label for="factorrh">edad</label>
+                                <input type="text" class="form-control" id="factorrh" name="factorrh" value="<?= $estud_factorrh ?>" required>
                             </div>
                             
                             <button type="submit" class="btn btn-primary">Actualizar</button>
