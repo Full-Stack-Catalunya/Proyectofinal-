@@ -33,15 +33,15 @@
                                 <input type="text" class="form-control" id="nombre" name="nombre" required>
                             </div>
                             <div class="form-group">
-                                <label for="jornada">jornada</label>
+                                <label for="jornada">Jornada</label>
                                 <input type="text" class="form-control" id="jornada" name="jornada" required>
                             </div>
                             <div class="form-group">
-                                <label for="docente">docente</label>
+                                <label for="docente">Docente</label>
                                 <input type="text" class="form-control" id="docente" name="docente" required>
                             </div>
                             <div class="form-group">
-                                <label for="area">area</label>
+                                <label for="area">Area</label>
                                 <input type="text" class="form-control" id="area" name="area" required>
                             </div>
                             
