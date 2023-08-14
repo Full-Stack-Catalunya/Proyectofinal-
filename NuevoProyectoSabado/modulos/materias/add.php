@@ -6,7 +6,7 @@
     if(isset($_POST['nombre']))      $nombre = $_POST['nombre'];
     if(isset($_POST['jornada']))      $horario = $_POST['jornada']; 
     if(isset($_POST['docente']))      $docente = $_POST['docente']; 
-    if(isset($_POST['area']))  $descripcion = $_POST['area'];
+    if(isset($_POST['area']))  $area = $area_POST['area'];
 
     $conexion = new Database;  
     $result = $conexion->CrearMateria($nombre,$jornada,$docente,$area);
