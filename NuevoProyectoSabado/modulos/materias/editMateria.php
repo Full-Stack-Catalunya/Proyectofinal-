@@ -51,7 +51,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="docente">Docente</label>
-                                <input type="text" class="form-control" id="nombre" name="nombre" value="<?= $mat_docente ?>" required>
+                                <input type="text" class="form-control" id="docente" name="docente" value="<?= $mat_docente ?>" required>
                                 <input type="hidden" class="form-control" id="docente" name="docente" value="<?= $mat_docente ?>">
                             </div>
                             <div class="form-group">
