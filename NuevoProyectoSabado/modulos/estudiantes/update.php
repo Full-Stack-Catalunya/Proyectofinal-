@@ -8,6 +8,9 @@
     if(isset($_POST['apellidos']))      $apellidos = $_POST['apellidos']; 
     if(isset($_POST['email']))          $email = $_POST['email']; 
     if(isset($_POST['telefono']))       $telefono = $_POST['telefono']; 
+    if(isset($_POST['edad']))       $telefono = $_POST['edad'];
+    if(isset($_POST['direccion']))       $telefono = $_POST['direccion'];
+    if(isset($_POST['factorrh']))       $telefono = $_POST['factorrh'];
     if(isset($_POST['identificacion']))       $identificacion = $_POST['identificacion']; 
 
     $conexion = new Database;  
