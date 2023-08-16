@@ -79,7 +79,6 @@
                                 <th scope="col">Jornada</th>
                                 <th scope="col">Docente</th>
                                 <th scope="col">Area</th>
-                                <th scope="col">Herramientas</th>
                                 </tr>
                             </thead>
                             <tbody>
