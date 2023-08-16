@@ -83,8 +83,7 @@
                                 <th scope="col">Telefono</th>
                                 <th scope="col">Edad</th>
                                 <th scope="col">Direccion</th>
-                                <th scope="col">Factorrh</th>    
-                                <th scope="col">Herramientas</th>
+                                <th scope="col">Factorrh</th>   
                                 </tr>
                             </thead>
                             <tbody>
